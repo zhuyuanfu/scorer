@@ -846,7 +846,7 @@ class App extends React.Component {
  
             {/* 12 发展规划与学科建设处、“双一流”建设办公室（林学学部、林业工程学部） */}
             <Divider />
-            <div>12 发展规划与学科建设处、“双一流”建设办公室（林学学部、林业工程学部）</div>
+            <div>12 发展规划与学科建设处、“双一流”建设办公室</div>
             <div style = {{display: "inline"}}>核心工作（30分）：</div>
             <InputNumber min={0}  max={30} 
               value={this.state.coreWork_fzghyxkjsc} 
@@ -1233,7 +1233,7 @@ class App extends React.Component {
 
             {/* 25 后勤管理处、后勤服务总公司、后勤党工委 */}
             <Divider />
-            <div>25 后勤管理处、后勤服务总公司、后勤党工委</div>
+            <div>25 后勤管理处、后勤服务总公司</div>
             <div style = {{display: "inline"}}>核心工作（30分）：</div>
             <InputNumber min={0}  max={30} 
               value={this.state.coreWork_hqglc} 
