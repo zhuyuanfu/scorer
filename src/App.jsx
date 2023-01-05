@@ -167,6 +167,9 @@ class App extends React.Component {
 
     loadScoreSheet() {
         console.log("正在从后端获取评分表。评分员不变号为：" + this.state.scorerEmployeeNumber + "，评分员密码为：" + this.state.scorerPassword);
+        if (this.state.scorerEmployeeNumber == "" || this.state.scorerPassword == "") {
+          return;
+        }
         service.queryScoreSheetByEmployeeNumberAndPassword(this.state.scorerEmployeeNumber, this.state.scorerPassword).then(response => {
           console.log(JSON.stringify(response));
           let scoreSheet = response.data;
@@ -514,9 +517,10 @@ class App extends React.Component {
                 console.log("评分人密码变更为：" + e.target.value);
                 this.setState({scorerPassword: e.target.value});
               }}
-              onBlur={this.loadScoreSheet}
+              // onBlur={this.loadScoreSheet}
               style={{width: '100px'}}
             />
+            <Button onClick={this.loadScoreSheet} type="primary">登录</Button>
             
             {this.state.scorerIdentified ? <CheckOutlined /> : "" }
 
